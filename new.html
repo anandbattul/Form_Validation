@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            /* background-color: black; */
+        }
+        #continer{
+            /* background-color: blue; */
+            margin: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+  <div id="continer">
+    <h1>SIGN UP</h1>
+    <p>Enter your details to create new account for TV2Z</p>
+    <input type="text" placeholder="Username" id="Username" value="" /><br /><br />
+    <input type="email" placeholder="Email Id" id="email" value="" /><br /><br />
+
+    <input type="password" placeholder="password" id="password" value="" /><br />
+    <p id="errorp" style="color: red;"></p>
+    <br /><br />
+
+    <input type="password" placeholder="Retype password" id="rpassword" value="" /><br /><br />
+    
+    <button onclick="CheckPassword()">ok</button>
+   
+</div>
+    <script>
+
+        function CheckPassword() {
+            let pass = document.getElementById("password").value;
+            var passw = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+            if (pass.match(passw)) {
+                alert("correct")
+            } else {
+                // alert("Wrong...!");
+                document.getElementById("errorp").innerHTML=`Please follow this format: 
+                Minimum eight characters,
+                at least one letter,
+                one number and one special character`
+            }
+        };
+    </script>
+</body>
+
+</html>
