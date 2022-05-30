@@ -4,7 +4,7 @@ function validation() {
     console.log(user);
     var conpass = document.getElementById("conpass").value;
     var email = document.getElementById("email").value;
-    var mobile = document.getElementById("mobile").value;
+ 
     if (user.length < 2) {
         document.getElementById("userr").innerHTML = `**Please write more than one character in the Box`
         return false;
@@ -80,19 +80,4 @@ function validation() {
         document.getElementById("emaill").innerHTML = ``
     }
 
-
-    if (mobile == "") {
-        document.getElementById("mobilee").innerHTML = `**Please write Mobile Number in the Box`
-        return false;
-    }
-    if (isNaN(mobile)) {
-        document.getElementById("mobilee").innerHTML = `**Please write Number only in the Box`
-        return false;
-    }
-    if (mobile.length < 10 || mobile.length > 10) {
-        document.getElementById("mobilee").innerHTML = `**Please write 10 digit Mobile Number in the Box`
-        return false;
-    } else {
-        document.getElementById("mobilee").innerHTML = "";
-    }
 }
