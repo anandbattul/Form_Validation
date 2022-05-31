@@ -1,7 +1,7 @@
 function validation() {
     var user = document.getElementById("user").value;
     var pass = document.getElementById("pass").value;
-    console.log(user);
+    console.log("Hi "+user);
     var conpass = document.getElementById("conpass").value;
     var email = document.getElementById("email").value;
  
